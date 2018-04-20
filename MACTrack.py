@@ -78,8 +78,8 @@ def scan():
         os.remove('MACs.txt')
     except OSError:
         pass
-    os.system('tshark -Q -l -i ' + loadconfig(3) + 'mon -T fields -e wlan.sa -a duration:' + loadconfig(6) + ' |'
-                                                                                                             ' grep -ioE \'([a-z0-9]{2}:){5}..\' >> MACs.txt')
+    os.system('tshark -Q -l -i ' + loadconfig(3) + 'mon -T fields -e wlan.sa -a duration:' + loadconfig(6) + ' |' +
+              ' grep -ioE \'([a-z0-9]{2}:){5}..\' >> MACs.txt')
     return checkformacs()
 
 
