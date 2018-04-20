@@ -4,8 +4,11 @@ import time
 
 
 def loadconfig(line):
-    configfile = open("settings.conf").read().splitlines()
-    return configfile[int(line) - 1].strip()
+    if os.path.isfile("settings.conf"):
+        configfile = open("settings.conf").read().splitlines()
+        return configfile[int(line) - 1].strip()
+    else:
+        print("settings.conf does not exist.")
 
 
 # Opens 'Known.txt' to build known devices dictionary.
