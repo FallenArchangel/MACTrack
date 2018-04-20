@@ -58,6 +58,12 @@ local_settings.py
 instance/
 .webassets-cache
 
+# Intellij
+.idea/
+*.iml
+*.iws
+*.xml
+
 # Scrapy stuff:
 .scrapy
 
